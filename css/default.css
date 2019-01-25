@@ -57,8 +57,8 @@ ul,ol{list-style:none}
 em,address{font-style:normal}
 input[type="text"],input[type="number"],input[type="password"],select{vertical-align:middle;border:solid 1px #d0d0d0;}
 input[type="radio"] {vertical-align:middle;}
-textarea{padding:3px; text-align:left; line-height:18px; color:#666; border:solid 1px #d0d0d0;}
-select{border:solid 1px #d0d0d0;}
+textarea{ width:100%; padding:3px; text-align:left; line-height:18px; color:#666; border:solid 1px #d0d0d0; resize: none; overflow-y:auto;}
+select{border:solid 1px #d0d0d0; }
 hr,legend{display:none}
 caption{overflow:hidden;width:0px;height:0px;padding:0;font-size:0;line-height:0;text-indent:-999px}
 table{border-collapse:collapse;border-spacing:0; width:100%}
@@ -71,10 +71,9 @@ a:visited {text-decoration:none;}
 a:hover { text-decoration:none;}
 a:focus {text-decoration:none;}
 a:active { text-decoration:none;}
-.blind,legend,.ir_text,caption{overflow:hidden;width:100%;height:0px;font-size:0;line-height:0;text-indent:-9999px}
+.blind,legend,.ir,caption{overflow:hidden;width:100%;height:0px;font-size:0;line-height:0;text-indent:-9999px}
 .hidden{visibility:hidden; width:0; height:0;}
 
-.point_r{color:#ec3865;}
 .fl{ float:left !important; }
 .fr{ float:right !important; }
 .fn{ float:none !important; }
@@ -98,11 +97,6 @@ a:active { text-decoration:none;}
 .fs{ font-size:11px !important; }
 .fixed{ table-layout:fixed}
 .pr{ position:relative;}
-.c-red{ color:#72000a !important }
-.c-point{ color:#930d03 }
-.fw-b{ font-weight:600; }
-.donetx{ color:#87a621 !important; }
-.done1tx{color:#777 !important; }
 .clfix:after { display:block; clear:both; content:"" }
 .lesstx { font-family:'Nanum Gothic' }
 
@@ -127,10 +121,10 @@ a:active { text-decoration:none;}
 .chked_area input[type="radio"] {position:absolute; width:1px; height:1px; border:0; -webkit-appearance:none; clip:rect(0,0,0,0)}
 input[type="checkbox"] + label {display:inline-block;height:22px;line-height:21px;padding:0 0 0 25px;font-size:14px;background:url(../images/inp_checkbox.gif) no-repeat left center; cursor:pointer}
 input[type="checkbox"]:checked + label {background:url(../images/inp_checkbox_on.gif) no-repeat left center;}
+input[type="radio"] + label {display:inline-block;height:22px;line-height:21px;padding:0 0 0 25px;font-size:14px;background:url(../images/inp_radiobox.gif) no-repeat left center; cursor:pointer}
+input[type="radio"]:checked + label {background:url(../images/inp_radiobox_on.gif) no-repeat left center;}
 input[type="text"],
-input[type="password"], select{height:28px;line-height:26px;padding:0 3px;font-size:14px;color:#333;}
-.section .searchbox > span {margin-bottom:10px; margin-left:0}
-.section .searchbox > span .tit {width:47px}
-.section .searchbox {padding:20px}
-.section .searchbox select {padding:0 10px}
-.section .searchbox label {font-weight:normal}
+input[type="password"] {height:28px;line-height:26px;padding:0 3px;font-size:14px;color:#333;}
+input[type="text"] { width:100%;}
+select { min-width:120px; height:30px; margin:0; padding:5px 25px 6px 10px; border:1px solid#d0d0d0; background:url(../images/select_bg.gif) 100% 50% no-repeat; -webkit-appearance:none; -moz-appearance:none; -o-appearance:none; appearance:none; word-wrap:break-word; z-index:10; }
+select::-ms-expand { display:none; } /* ie 기본 화살표 없앰 */

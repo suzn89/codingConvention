@@ -1,10 +1,31 @@
 @charset "utf-8";
 
 /* 공통 레이아웃 */
+.borderbox { width:100%; margin-bottom:20px; padding:20px; border:1px solid #dadada; box-sizing:border-box; }
 #container { width:100%; height:auto; padding:20px 0; }
 #content { overflow:hidden; width:1200px; margin:0 auto; }
+
+/* 공통 스타일 */
+#content h2 { margin-bottom:20px; font-weight:bold; font-size:32px; color:#444444; }
+#content h3 { margin-bottom:15px; font-weight:bold; font-size:28px; color:#444444; }
+#content h4 { margin-bottom:10px; font-weight:bold; font-size:20px; color:#444444; }
+#content h4:before { padding-right:10px; padding-left:1px; font-family:'iconfont'; color:#46ba97; font-size: 16px; content:'\f10c'; vertical-align:middle;}
 
 /* login.html */
 .box_login_ipt { position:relative; margin-bottom:8px; }
 .box_login_ipt > label { position:absolute; top:6px; left:6px; }
 .btn_login input { width:155px; height:32px; line-height:32px; border:0; background:#f1435a; color:#ffffff;}
+
+
+/* 검색 */
+.box_srch { position:relative; width:400px; padding-right:28px; height:28px; border:1px solid #d0d0d0; box-sizing:content-box; }
+.box_srch>input { border:0; box-sizing:border-box;}
+.box_srch>.btn_srch { position:absolute; right:0; top:0; width:28px; height:28px; }
+.box_srch>.btn_srch:after { font-family:'iconfont'; color:#666666; content:'\f002'; }
+
+/* 날짜검색 */
+.box_calendar { display:inline-block; position:relative; width:100px; height:28px; padding-right:28px; border:1px solid #d0d0d0; box-sizing:content-box; }
+.box_calendar>input { border:0; box-sizing:border-box; }
+.box_calendar>.btn_cal { position:absolute; right:0; top:0; width:28px; height:28px; }
+.box_calendar>.btn_cal:after { font-family:'iconfont'; color:#666666; content:'\f073'; }
+.box_calendar span.ing { display:inline-block; width:13px; line-height:13px; text-align:center; }

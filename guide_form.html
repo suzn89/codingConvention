@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>guide_form</title>
+<link rel="stylesheet" type="text/css" href="css/default.css">
+<link rel="stylesheet" type="text/css" href="css/custom.css">
+<link href="fonts/iconfont/style.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.12.4.js"></script>
+<script src="js/prefixfree.min.js"></script>
+<script src="js/html5shiv.js"></script>
+<script src="js/index.js"></script>
+</head>
+<body>
+
+<div id="wrap">
+  <div id="header">
+  </div> <!-- //header -->
+
+  <div id="container">
+    <div id="content">
+      <h1>Guide 01, logo</h1>
+      <h2>Title [h2]</h2>
+      <h3>Sub Title [h3]</h3>
+      <h4>content title [h4]</h4>
+
+      <div class="borderbox">
+        <h4>Form 그룹화</h4>
+        <textarea name="" id="" cols="30" rows="10">
+<form action="">
+  <fieldset>
+    <legend>fieldset 요소의 제목표시</legend>
+    <label for="id_01">이름: </label> <input type="text" id="id_01">
+    <label for="id_02">주소: </label> <input type="text" id="id_02">
+    <input type="submit">
+  </fieldset>
+</form>          
+        </textarea>
+      </div>
+
+      <div class="borderbox">
+        <h4>Checkbox</h4>
+        <span class="chked_area">
+          <input type="checkbox" name="" id="checkbox" checked>
+          <label for="checkbox">체크박스1</label>
+        </span>
+        <span class="chked_area">
+          <input type="checkbox" name="" id="checkbox2">
+          <label for="checkbox2">체크박스2</label>
+        </span>
+      </div>
+
+      <div class="borderbox">
+        <h4>Radio</h4>
+        <span class="chked_area">
+          <input type="radio" name="radio1" id="radio1" checked>
+          <label for="radio1">라디오버튼</label>
+          <input type="radio" name="radio1" id="radio2">
+          <label for="radio2">라디오버튼2</label>
+        </span>
+      </div>
+
+      <div class="borderbox">
+        <h4>Select</h4>
+          <select name="" id="" title="해당항목선택">
+            <option value="">선택 1</option>
+            <option value="">선택 2</option>
+            <option value="">선택 3</option>
+          </select>   
+          <select name="" id="" title="해당항목선택">
+            <option value="">선택항목 옵션명이 길어짐 1</option>
+            <option value="">선택 2</option>
+            <option value="">선택 3</option>
+          </select>   
+      </div>
+
+      <div class="borderbox">
+        <h4>Input Text Type</h4>
+        <input type="text" title="인풋설명" name="" id="" class="ipt_text">
+        <br><br>
+        <div class="box_srch">
+          <input type="text" title="검색어 입력" name="" id="" class="ipt_text">  
+          <button class="btn_srch"><span class="ir">검색</span></button>
+        </div>
+        <br>
+        <div class="box_calendar">
+          <input type="text" title="검색어 입력" name="" id="" class="ipt_text">  
+          <button class="btn_cal"><span class="ir">검색</span></button>          
+        </div>
+        <span class="ing">~</span>
+        <div class="box_calendar">
+          <input type="text" title="검색어 입력" name="" id="" class="ipt_text">  
+          <button class="btn_cal"><span class="ir">검색</span></button>          
+        </div>
+      </div>
+
+    </div> <!-- //content -->
+  </div> <!-- //container -->
+
+  <div id="footer">
+  </div> <!-- //footer -->
+</div> <!-- // wrap -->
+
+</body>
+</html>

@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charset 'utf-8';
 $primaryColor:#46ba97;
 $primaryHover:#38a685;
 $secondaryColor:#9ba5a7;
@@ -228,15 +228,26 @@ a.btn {
     color:$primaryColor;
   }
 }
-/* 테이블 */
-.basic_tbl_list {
-  border-top:2px solid #cdd2d5;
-  border-bottom:1px solid #cdd2d5;
+
+/* 테이블 공통 */
+[class^='basic_tbl'] {
+  th {
+    word-break:keep-all;
+  }
   th,td {
     padding:5px 0;
     font-size:13px;
     text-align:center;
+    input {
+      box-sizing:border-box;
+    }
   }
+}
+
+/* 테이블- 리스트형 */
+.basic_tbl_list {
+  border-top:2px solid #cdd2d5;
+  border-bottom:1px solid #cdd2d5;
   th {
     border-bottom:2px solid #cdd2d5;
     background:#ffffff;
@@ -258,6 +269,102 @@ a.btn {
     }
   }
 }
+
+/* 테이블 - 입력 */
+.basic_tbl_add {
+  border-top:2px solid #cdd2d5;
+  th {
+    text-align:left;
+    padding:5px 20px;
+    border-bottom:1px solid #f1f3f2;
+    font-weight:bold;
+    .required:after {
+      content:'*';
+      color:$warningColor;
+      font-size:11px;
+      font-weight:bold;
+    }
+  }
+  td {
+    border-bottom:1px solid #f1f3f2;
+    text-align:left;
+    .ipt_read {
+      background:#f1f3f2;
+    }
+  }
+}
+
+/* 테이블 - 데이터형 */
+.basic_tbl_data {
+  border-top:1px solid #cdd2d5;
+  th,td {
+    padding:10px;
+  }
+  th {
+    border-bottom:1px solid #f1f3f2;
+    background:#f1f3f2;
+    font-weight:bold;
+  }
+  td {
+    border-bottom:1px solid #f1f3f2;
+    word-break:keep-all;
+    .location {
+      display:inline-block;
+      width:25px;
+      height:25px;
+      border-radius:5px;
+      border:1px solid #f1f3f2;
+      background:#fafafa;
+      color:$primaryColor;
+      font-size:15px;
+      line-height:25px;
+      transition:all 0.5s;
+      &:hover {
+        background:$primaryColor;
+        color:#ffffff;
+      }
+    }
+  }
+}
+
+/* Tab */
+.tabbox {
+  .tabs {
+    overflow:hidden;
+    margin-bottom:10px;
+    li {
+      float:left;
+      margin-right:2px;
+      font-size:14px;
+      a {
+        display:block;
+        width:120px;
+        height:30px;
+        border:1px solid $secondaryColor;
+        color:$secondaryColor;
+        text-align:center;
+        line-height:30px;
+        &:hover {
+          border-color:$primaryColor;
+          background:$primaryColor;
+          color:#ffffff;
+        }
+      }
+      .on {
+        border-color:$primaryColor;
+        background:$primaryColor;
+        color:#ffffff;
+        font-weight:bold;
+      }
+    }
+  }
+  .penels {
+    width:100%;
+    text-align:justify;
+    line-height:160%;
+  }
+}
+
 /* 모달팝업 */
 #modal_cont {
   position:fixed;
